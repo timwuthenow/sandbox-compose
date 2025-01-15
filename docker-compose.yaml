@@ -7,7 +7,7 @@ services:
     ports:
       - 9090:8080
     volumes:
-      - ./branding/app_logo_rgb_fullcolor_reverse.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
+      - ./branding/owl.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
       - ./branding/app_logo_rgb_fullcolor_default.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_default.svg
       - ./branding/favicon.png:/kie-sandbox/app/favicon.png
 

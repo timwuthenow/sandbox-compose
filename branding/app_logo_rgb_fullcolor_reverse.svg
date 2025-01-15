@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
 <defs>
 <style>
-.owl-colored { fill: #FC764C; }
+.owl-colored { fill: #ffffff; }
 .text {
     fill: #FC764C;
     font-family: Poppins, sans-serif;
@@ -22,5 +22,5 @@
 </g>
 
 <!-- Text -->
-<text x="160" y="130" class="text">aletyx designer</text>
+<!-- <text x="160" y="130" class="text">aletyx designer</text> -->
 </svg>
