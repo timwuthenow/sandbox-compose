@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   kie_sandbox:
     container_name: kie_sandbox
