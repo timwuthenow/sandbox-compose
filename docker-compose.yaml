@@ -14,8 +14,8 @@ services:
     environment:
       KIE_SANDBOX_DEV_DEPLOYMENT_DMN_FORM_WEBAPP_IMAGE_URL: apache/incubator-kie-sandbox-dev-deployment-dmn-form-webapp:10.0.0
       KIE_SANDBOX_REQUIRE_CUSTOM_COMMIT_MESSAGE: true
-      KIE_SANDBOX_EXTENDED_SERVICES_URL: http://localhost:21345
-      KIE_SANDBOX_CORS_PROXY_URL: http://localhost:7081
+      KIE_SANDBOX_EXTENDED_SERVICES_URL: http://extended_services:21345
+      KIE_SANDBOX_CORS_PROXY_URL: http://cors:8080
       KIE_SANDBOX_ACCELERATORS: >
         [
                              {
