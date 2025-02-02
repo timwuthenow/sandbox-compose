@@ -2,14 +2,15 @@ version: "3.8"
 services:
   kie_sandbox:
     container_name: kie_sandbox
-    image: apache/incubator-kie-sandbox-webapp:10.0.0
+    build: .
+    #image: apache/incubator-kie-sandbox-webapp:10.0.0
     platform: linux/amd64
     ports:
       - 9090:8080
-    volumes:
-      - ./branding/owl.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
-      - ./branding/app_logo_rgb_fullcolor_default.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_default.svg
-      - ./branding/favicon.png:/kie-sandbox/app/favicon.png
+    # volumes:
+    #   - ./branding/owl.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
+    #   - ./branding/app_logo_rgb_fullcolor_default.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_default.svg
+    #   - ./branding/favicon.png:/kie-sandbox/app/favicon.png
 
     environment:
       KIE_SANDBOX_DEV_DEPLOYMENT_DMN_FORM_WEBAPP_IMAGE_URL: apache/incubator-kie-sandbox-dev-deployment-dmn-form-webapp:10.0.0
