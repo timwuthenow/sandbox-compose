@@ -2,35 +2,35 @@ version: "3.8"
 services:
   kie_sandbox:
     container_name: kie_sandbox
-    build: .
-    #image: apache/incubator-kie-sandbox-webapp:10.0.0
+    image: apache/incubator-kie-sandbox-webapp:10.0.0
     platform: linux/amd64
     ports:
       - 9090:8080
     # volumes:
-    #   - ./branding/owl.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
-    #   - ./branding/app_logo_rgb_fullcolor_default.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_default.svg
-    #   - ./branding/favicon.png:/kie-sandbox/app/favicon.png
+    # - ./branding/owl.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_reverse.svg
+    # - ./branding/app_logo_rgb_fullcolor_default.svg:/kie-sandbox/app/images/app_logo_rgb_fullcolor_default.svg
+    # - ./branding/favicon.png:/kie-sandbox/app/favicon.png
 
     environment:
       KIE_SANDBOX_DEV_DEPLOYMENT_DMN_FORM_WEBAPP_IMAGE_URL: apache/incubator-kie-sandbox-dev-deployment-dmn-form-webapp:10.0.0
+      KIE_SANDBOX_DEV_DEPLOYMENT_KOGITO_QUARKUS_BLANK_APP_IMAGE_URL: apache/incubator-kie-sandbox-dev-deployment-quarkus-blank-app:10.0.0
       KIE_SANDBOX_REQUIRE_CUSTOM_COMMIT_MESSAGE: true
-      KIE_SANDBOX_EXTENDED_SERVICES_URL: http://extended_services:21345
-      KIE_SANDBOX_CORS_PROXY_URL: http://cors:8080
+      KIE_SANDBOX_EXTENDED_SERVICES_URL: http://localhost:21345
+      KIE_SANDBOX_CORS_PROXY_URL: http://localhost:7081
       KIE_SANDBOX_ACCELERATORS: >
         [
                              {
            "name": "Process Kogito jBPM Profile",
-           "iconUrl": "https://github.com/kiegroup/kie-sandbox-quarkus-accelerator/raw/0.0.0/quarkus-logo.png",
+           "iconUrl": "https://raw.githubusercontent.com/timwuthenow/sandbox-accelerators/refs/heads/main/quarkus-logo.png",
            "gitRepositoryUrl": "https://github.com/timwuthenow/sandbox-accelerators.git",
-           "gitRepositoryGitRef": "bpmn",
+           "gitRepositoryGitRef": "main",
            "dmnDestinationFolder": "src/main/resources/dmn",
            "bpmnDestinationFolder": "src/main/resources/bpmn",
            "otherFilesDestinationFolder": "src/main/resources/others"
          },
          {
            "name": "Decisions Kogito jBPM Profile",
-           "iconUrl": "https://github.com/kiegroup/kie-sandbox-quarkus-accelerator/raw/0.0.0/quarkus-logo.png",
+           "iconUrl": "https://raw.githubusercontent.com/timwuthenow/sandbox-accelerators/refs/heads/main/quarkus-logo.png",
            "gitRepositoryUrl": "https://github.com/timwuthenow/sandbox-accelerators.git",
            "gitRepositoryGitRef": "dmn",
            "dmnDestinationFolder": "src/main/resources/dmn",
